@@ -15,7 +15,7 @@
     "value": "testsandbox"
   },
   "templateBaseUrl": {
-    "value": "https://raw.githubusercontent.com/rraju03/azure-resource-manager-dse/master/simple/"
+    "value": "https://raw.githubusercontent.com/rraju03/ARM_DSE_Parameterized_template/master/dev/"
   },
   "nodesTemplateFile": {
     "value": "DSE-nodesTemplate.json"
