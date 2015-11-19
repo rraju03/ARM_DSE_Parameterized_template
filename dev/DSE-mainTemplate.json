@@ -106,6 +106,13 @@
         "description": "Starting name of VMs"
 	  }	
 	},
+	"networkResourceGroupName": {
+	  "type": "string",
+      "defaultValue": "EMJU-AZDV-Network",
+      "metadata": {
+        "description": "Name of virtual network resource group"
+	  }
+	},
 	"vnetName": {
 	  "type": "string",
       "defaultValue": "EMJU-VNet",
@@ -130,6 +137,7 @@
     "opsCenterInstallTemplateUrl": "[concat(variables('templateBaseUrl'), parameters('opsCenterInstallTemplateFile'))]",
     "nodeList": "[concat(variables('clusterRange').base, variables('clusterRange').start, '-', parameters('clusterNodeCount'))]",
     "storageAccountName": "[variables('clusterName')]",
+	"networkResourceGroupName": "[parameters('networkResourceGroupName')]",
     "vnetName": "[parameters('vnetName')]",
     "subnetName": "[parameters('subnetName')]",
     "clusterRange": {
@@ -202,6 +210,9 @@
           "staticIps": {
             "value": "[variables('clusterRange')]"
           },
+		  "networkResourceGroupName": {
+			"value": "[variables('networkResourceGroupName')]",
+		  },
           "vnetName": {
             "value": "[variables('vnetName')]"
           },
@@ -249,6 +260,9 @@
           "dnsName": {
             "value": "[variables('clusterName')]"
           },
+		  "networkResourceGroupName": {
+			"value": "[variables('networkResourceGroupName')]",
+		  },
           "vnetName": {
             "value": "[variables('vnetName')]"
           },

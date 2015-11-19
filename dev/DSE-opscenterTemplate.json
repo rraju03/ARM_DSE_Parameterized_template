@@ -26,6 +26,9 @@
     "dnsName": {
       "type": "string"
     },
+	"networkResourceGroupName": {
+      "type": "string"
+    },
     "vnetName": {
       "type": "string"
     },
@@ -34,7 +37,7 @@
     }
   },
   "variables": {
-    "vnetID" : "[resourceId('Core-Group','Microsoft.Network/virtualNetworks',parameters('vnetName'))]",
+    "vnetID" : "[resourceId(parameters('networkResourceGroupName'),'Microsoft.Network/virtualNetworks',parameters('vnetName'))]",
 	"subnetName" : "[concat(variables('vnetID'),'/subnets/',parameters('subnetName'))]",
     "publicIpName": "[concat(parameters('namespace'), 'PublicIp')]",
     "publicIpRef": "[concat('Microsoft.Network/publicIPAddresses/', variables('publicIpName'))]",

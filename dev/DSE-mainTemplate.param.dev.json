@@ -38,6 +38,9 @@
   "namespace": {
 	"value": "dev"
   },
+  "networkResourceGroupName": {
+    "value": "EMJU-AZDV-Network",
+  },
   "vnetName": {
 	"value": "EMJU-VNet"
   },

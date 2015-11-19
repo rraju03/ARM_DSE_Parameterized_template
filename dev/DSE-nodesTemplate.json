@@ -29,6 +29,9 @@
     "staticIps": {
       "type": "object"
     },
+	"networkResourceGroupName": {
+      "type": "string"
+    },
     "vnetName": {
       "type": "string"
     },
@@ -37,8 +40,8 @@
     }
   },
   "variables": {
-    "vnetID" : "[resourceId('Core-Group','Microsoft.Network/virtualNetworks',parameters('vnetName'))]",
-	"subnetName" : "[concat(variables('vnetID'),'/subnets/','Tier-3')]",
+    "vnetID" : "[resourceId(parameters('networkResourceGroupName'),'Microsoft.Network/virtualNetworks',parameters('vnetName'))]",
+	"subnetName" : "[concat(variables('vnetID'),'/subnets/',parameters('subnetName'))]",
     "vmName": "[concat(parameters('namespace'), 'vm')]"
   },
   "resources": [
