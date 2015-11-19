@@ -12,7 +12,7 @@
     "value": "C@ss@ndr@1"
   },
   "clusterName": {
-    "value": "testc"
+    "value": "randomc"
   },
   "templateBaseUrl": {
     "value": "https://raw.githubusercontent.com/rraju03/ARM_DSE_Parameterized_template/master/dev/"
