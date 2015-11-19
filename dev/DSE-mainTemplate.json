@@ -104,6 +104,21 @@
       "defaultValue": "test",
       "metadata": {
         "description": "Starting name of VMs"
+	  }	
+	},
+	"vnetName": {
+	  "type": "string",
+      "defaultValue": "EMJU-VNet",
+      "metadata": {
+        "description": "Name of virtual network"
+	  }
+	},
+	"subnetName": {
+	  "type": "string",
+      "defaultValue": "Data",
+      "metadata": {
+        "description": "Name of subnet in virtual network"
+	  }
 	}
   },
   "variables": {
@@ -115,8 +130,8 @@
     "opsCenterInstallTemplateUrl": "[concat(variables('templateBaseUrl'), parameters('opsCenterInstallTemplateFile'))]",
     "nodeList": "[concat(variables('clusterRange').base, variables('clusterRange').start, '-', parameters('clusterNodeCount'))]",
     "storageAccountName": "[variables('clusterName')]",
-    "vnetName": "Safeway-Dev-QA1",
-    "subnetName": "Tier-3",
+    "vnetName": "[parameters('vnetName')]",
+    "subnetName": "[parameters('subnetName')]",
     "clusterRange": {
       "base": "[parameters('clusterIPRangeBase')]",
       "start": "[parameters('clusterIPRangeStart')]"

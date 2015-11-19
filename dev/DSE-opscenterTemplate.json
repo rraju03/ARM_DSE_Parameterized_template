@@ -35,7 +35,7 @@
   },
   "variables": {
     "vnetID" : "[resourceId('Core-Group','Microsoft.Network/virtualNetworks',parameters('vnetName'))]",
-	"subnetName" : "[concat(variables('vnetID'),'/subnets/','Tier-3')]",
+	"subnetName" : "[concat(variables('vnetID'),'/subnets/',parameters('subnetName'))]",
     "publicIpName": "[concat(parameters('namespace'), 'PublicIp')]",
     "publicIpRef": "[concat('Microsoft.Network/publicIPAddresses/', variables('publicIpName'))]",
     "securityGroupName": "[concat(parameters('namespace'), 'nsg')]"

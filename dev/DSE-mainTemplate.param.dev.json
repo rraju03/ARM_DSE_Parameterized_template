@@ -27,15 +27,21 @@
     "value": "DSE-opscenterInstallTemplate.json"
   },
   "clusterIPRangeBase": {
-    "value": "172.31.195."
+    "value": "10.0.200."
   },
   "clusterIPRangeStart": {
-    "value": 46
+    "value": 41
   },
   "opsCenterIP": {
-    "value": "172.31.195.45"
+    "value": "10.0.200.40"
   },
   "namespace": {
 	"value": "dev"
+  },
+  "vnetName": {
+	"value": "EMJU-VNet"
+  },
+  "subnetName": {
+	"value": "Data"
   }
 }
