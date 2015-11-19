@@ -261,7 +261,7 @@
             "value": "[variables('clusterName')]"
           },
 		  "networkResourceGroupName": {
-			"value": "[variables('networkResourceGroupName')]",
+			"value": "[variables('networkResourceGroupName')]"
 		  },
           "vnetName": {
             "value": "[variables('vnetName')]"
