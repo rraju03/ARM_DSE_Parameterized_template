@@ -113,7 +113,10 @@
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[concat(parameters('namespace'), 'set')]",
       "location": "[parameters('region')]",
-      "properties": {}
+      "properties": {
+        "platformFaultDomainCount": 3,
+        "platformUpdateDomainCount": 18
+      }
     },
     {
       "apiVersion": "2015-06-15",
