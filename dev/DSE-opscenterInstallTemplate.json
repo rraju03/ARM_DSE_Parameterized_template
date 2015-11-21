@@ -21,13 +21,11 @@
       "type": "string"
     }
   },
-  "variables": {
-	"opscenterVM": "[concat(parameters('namespace'), 'vm')]"
-  },
+  "variables": {},
   "resources": [
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
-      "name": "variables('opscenterVM')/installopscenter",
+      "name": "devopcvm/installopscenter",
       "apiVersion": "2015-06-15",
       "location": "[parameters('region')]",
       "properties": {
