@@ -3,7 +3,7 @@
     "value": 4
   },
   "clusterVmSize": {
-    "value": "Standard_D3"
+    "value": "Standard_D14"
   },
   "adminUsername": {
     "value": "casadmin"
@@ -12,7 +12,7 @@
     "value": "C@ss@ndr@1"
   },
   "clusterName": {
-    "value": "easydevcluster"
+    "value": "apidev1"
   },
   "templateBaseUrl": {
     "value": "https://raw.githubusercontent.com/rraju03/ARM_DSE_Parameterized_template/master/dev/"
@@ -30,13 +30,16 @@
     "value": "10.0.200."
   },
   "clusterIPRangeStart": {
-    "value": 41
+    "value": 61
   },
   "opsCenterIP": {
-    "value": "10.0.200.40"
+    "value": "10.0.200.60"
   },
-  "namespace": {
-	"value": "dev"
+  "opsCenterNamespace": {
+	"value": "devopc"
+  },
+  "nodesNamespace": {
+	"value": "devnode"
   },
   "networkResourceGroupName": {
     "value": "EMJU-AZDV-Network"

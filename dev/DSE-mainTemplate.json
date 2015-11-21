@@ -99,7 +99,14 @@
         "description": "IP for opsCenter"
       }
     },
-	"namespace": {
+	"opsCenterNamespace": {
+	  "type": "string",
+      "defaultValue": "test",
+      "metadata": {
+        "description": "Starting name of OpsCenter"
+	  }	
+	},
+	"nodesNamespace": {
 	  "type": "string",
       "defaultValue": "test",
       "metadata": {
@@ -196,7 +203,7 @@
             "value": "[parameters('adminPassword')]"
           },
           "namespace": {
-            "value": "[parameters('namespace')]"
+            "value": "[parameters('nodesNamespace')]"
           },
           "vmSize": {
             "value": "[parameters('clusterVmSize')]"
@@ -249,7 +256,7 @@
             "value": "[parameters('adminPassword')]"
           },
           "namespace": {
-            "value": "[parameters('namespace')]"
+            "value": "[parameters('opsCenterNamespace')]"
           },
           "osSettings": {
             "value": "[variables('osSettings')]"
@@ -301,6 +308,9 @@
           },
           "nodeList": {
             "value": "[variables('nodeList')]"
+          },
+		  "namespace": {
+            "value": "[parameters('opsCenterNamespace')]"
           }
         }
       }
